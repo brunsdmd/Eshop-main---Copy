@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_block %}
+<section id="Contact">
+    <h2> <b>How can we help you?</b></h2>
+    <<img
+    src= "{% static "/images/waterdrip.jpg" %}"
+    class="" style="height: 150px;">
+        <div class="container">
+            <form method="post">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary btn-lg px-4 me-md-2" value="Submit">
+            </form>
+        </div>
+</section>
+{% endblock %}
